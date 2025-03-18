@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class ChangeImage : MonoBehaviour
 {
-    public Image original;
-    public Sprite newSprite;
+    public Sprite newButtonImage;
+    public Button button;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,13 +15,8 @@ public class ChangeImage : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void ChangeButtonImage()
     {
-        
-    }
-
-    public void NewImage()
-    {
-        original.sprite = newSprite;
+        button.image.sprite = newButtonImage;
     }
 }
