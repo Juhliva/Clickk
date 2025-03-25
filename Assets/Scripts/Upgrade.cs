@@ -20,12 +20,22 @@ public class Upgrade : MonoBehaviour
             clicker.Click += autoClicksPerSecond * amount * Time.deltaTime;
         }
     }
+
     public void autoClickUpgrade()
     {
         if (clicker.Click >= minimumClicksToUnlockUpgrade)
         {
             clicker.Click -= minimumClicksToUnlockUpgrade;
             amount++;
+        }
+    }
+
+    public void clickUpdate()
+    {
+        if (clicker.Click >= minimumClicksToUnlockUpgrade)
+        {
+            clicker.Click -= minimumClicksToUnlockUpgrade;
+            clicker.multiplier += amount;
         }
     }
 }
